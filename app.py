@@ -10,4 +10,7 @@ def index():
     # format as HH:MM:SS
     current_time = now.strftime("%H:%M:%S")
 
-    print(current_time)
+    return render_template('index.html', current_time=current_time)
+
+if __name__ == '__main__':
+    app.run(debug=True)
