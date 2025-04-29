@@ -7,8 +7,8 @@ def index():
     # current date and time
     now = datetime.datetime.now()
 
-    # format as HH:MM:SS
-    current_time = now.strftime("%H:%M:%S")
+    # format as HH:MM
+    current_time = now.strftime("%Y-%m-%d %H:%M")
 
     return render_template('index.html', current_time=current_time)
 
