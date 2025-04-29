@@ -10,6 +10,17 @@
 <body>
 <h1>War time planner</h1>
 <h2>Current time</h2>
-<p> {{ current_time  }} </p>
+<p>🕒 {{ current_time  }} </p>
+
+<h2>To do list</h2>
+<form method="POST">
+    <input type="text" name="task" placeholder="Enter task here!" required>
+    <button>Submit</button>
+</form>
+<ul>
+    {% for task in todo_items %}
+    <li>{{ task }}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
